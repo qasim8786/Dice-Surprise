@@ -1,5 +1,3 @@
-# Dice-Surprise
-A study on dice game probability and surprising outcomes.
 ---
 
 # The 50-50 Dice Surprise: How I Accidentally Rediscovered a Math Truth
@@ -75,7 +73,7 @@ target2 = 6  # player 2
 
 p1_wins, p2_wins, ties = simulate_games(num_simulations, target1, target2)
 
-# Graph
+# Visualize the madness
 labels = ['Player 1 (Needs 1)', 'Player 2 (Needs 6)', 'Ties']
 wins = [p1_wins, p2_wins, ties]
 
