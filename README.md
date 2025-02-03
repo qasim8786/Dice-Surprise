@@ -179,8 +179,7 @@ import random
 import matplotlib.pyplot as plt
 
 def dice_race(target1, target2):
-    """Simulates a single game where two players race to their respective targets."""
-    # Initialize players' remaining distances and roll counts
+    # Initialize players' distances and roll counts
     p1_distance = target1
     p2_distance = target2
     p1_rolls = 0
@@ -205,7 +204,7 @@ def dice_race(target1, target2):
     return p1_rolls, p2_rolls
 
 def simulate_games(num_simulations, target1, target2):
-    """Simulates multiple games and returns win counts for each player."""
+    """Simulates games and returns win counts for each player."""
     p1_wins = 0
     p2_wins = 0
     ties = 0
@@ -231,7 +230,6 @@ def simulate_multiple_targets(num_simulations, target_pairs):
     return results
 
 def plot_results(results, title):
-    """Generates a bar chart comparing win probabilities for different target pairs."""
     labels = [f'{t1}-{t2}' for t1, t2 in [targets for targets, _ in results]]
     p1_wins = [prob[0] for _, prob in results]
     p2_wins = [prob[1] for _, prob in results]
@@ -255,6 +253,7 @@ def plot_results(results, title):
     plt.show()
 
 # Define multiple lists of target pairs
+"""you can play around with this pairs and if you found something cool dont forget to email me about your finding i am also curious to know more of surprising findings"""
 target_pairs_list_1 = [
     (6, 6),
     (6, 7),
@@ -298,8 +297,8 @@ target_pairs_list_5 = [
     (30, 36)
 ]
 
-# Run simulations for each list
-num_simulations = 100000
+# number of time to run the simulation 
+num_simulations = 100000 #you can change it to dicrease or increase number of simulations   
 
 results_list_1 = simulate_multiple_targets(num_simulations, target_pairs_list_1)
 results_list_2 = simulate_multiple_targets(num_simulations, target_pairs_list_2)
@@ -351,7 +350,7 @@ The simulations were run for various target pairs, and the results are presented
 | (10, 11)            | 52.20%         | 47.80%         |
 | (11, 12)            | 52.93%         | 47.07%         |
 
-**Results for Target Pairs List 3 (Player 1 Target = 6; Player 2 with Larger Targets):**
+**Results for Target Pairs List 3 (Player 1 Target = 6; Player 2 with multiple of 6 + 1):**
 
 | Targets (P1 vs. P2) | Player 1 Win % | Player 2 Win % |
 |---------------------|----------------|----------------|
@@ -363,7 +362,7 @@ The simulations were run for various target pairs, and the results are presented
 | (6, 43)             | 93.50%         | 6.50%          |
 | (6, 49)             | 95.35%         | 4.65%          |
 
-**Results for Target Pairs List 4 (Moderate Increases):**
+**Results for Target Pairs List 4 (in this p1 can get to target with 1 less dice roll than p2):**
 
 | Targets (P1 vs. P2) | Player 1 Win % | Player 2 Win % |
 |---------------------|----------------|----------------|
@@ -434,7 +433,28 @@ This exploration demonstrates how even simple games can exhibit complex probabil
 Feel free to reach out with questions or comments:
 
 - **Email:** qasimmansoori853@gmail.com
+- **instagram:** https://www.instagram.com/qasim_244
+- **github:** https://github.com/qasim8786
 
 ---
 
-*This study showcases how simple games can reveal complex probability behaviors. By combining mathematical proofs with simulations, we gain a deeper understanding of the nuances in game outcomes. I hope this inspires others to explore and question the underlying mathematics in everyday scenarios, just as I did while playing Ludo.*
+*This study showcases how simple games can reveal complex probability behaviors. By combining mathematical proofs with simulations, we gain a deeper understanding of the nuances in game outcomes. I hope this inspires others to explore and question the underlying mathematics in everyday scenarios, just as I did while playing Ludo. most of the results was way diffrent thhan what was I was expecting*
+
+---
+
+*To get the cleaner code and this paper from my findings I took some help from Microsofts copilot* 
+
+---
+
+**Graphs**
+
+--- 
+![image](https://github.com/user-attachments/assets/7cd23061-c915-452a-886c-43600e78eb52)
+![image](https://github.com/user-attachments/assets/ed6fc797-659d-4185-b1f1-0b8eb65c9e09)
+![image](https://github.com/user-attachments/assets/b98ea49e-c009-406a-b246-40ab793c6581)
+![image](https://github.com/user-attachments/assets/cd2fb168-51ce-4b3b-ab44-484fdf6f3936)
+![image](https://github.com/user-attachments/assets/cb69f3fc-a477-4524-a413-7e31f41bce80)
+
+
+
+
